@@ -1,55 +1,97 @@
 .navbar{
-  display: flex;
-  justify-content: end;
-  padding-inline: 50px;
-  background-color: rgba(0, 0, 0, 0.159);
+  display:flex;
 }
 
-.nav-links{
-  list-style-type: none;
-  display: flex;
-  gap: 50px;
+.home-nav{
+  margin-top:30px;
+  font-weight: bold;
+  font-size:2rem;
 }
 
-.nav-links a{
-  text-decoration: none;
+.home-nav a{
   color: white;
-  font-size: 1.2em;
+  text-decoration: none;
+  padding-inline: 50px;
 }
 
-.header{
-  z-index: 1;
-  width: 50%;
-  padding: 50px;
-  border-radius: 20px;
-  font-size: 2em;
-  position: relative;
-  display: inline-block;
+.nav-items{
+  display: flex; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  gap:50px;
+  padding-inline: 50px;
+  margin-bottom: 50px;
+}
+
+.nav-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the link */
+}
+
+.nav-items a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position underline at the bottom of the text */
+  left: 50%; /* Start underline from the middle */
+  width: 0; /* Initially, set the width to 0 (no underline visible) */
+  height: 1px; 
+  background-color:#b5dcde; 
+  transition: 0.3s ease; 
+  transform: translateX(-50%);
+}
+
+.nav-items a:hover::after {
+  width: 100%;
 }
 
 .section{
-  text-align: center;
+  display: flex;
+  color: white;
+  padding-top: 30px;
+  width:75%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.section h2, h3, h4 {
+  font-weight: normal;
+}
+
+#job-title{
+  color:#010024;
+}
+
+#avatar-img{
+  width: 400px;
+  height: 400px;
 }
 
 .buttons{
+  margin-top: 20px;
   display: flex;
-  gap: 50px;
+  gap: 300px;
   color: white;
-  margin-left:50px;
   justify-content: center;
 }
 
 #project-button,#contact-button{
-  background-color: white;
-  padding: 10px;
-  border-radius: 15px;
+  background-color: #C8D7E8;
+  padding: 20px;
   color: black;
+  border-style:none;
+  border: 2px solid transparent;
+  transition: border-color 0.5s ease;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
 #project-button:hover,#contact-button:hover{
-  background-color: black;
-  color: white;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
+  border: 2px solid #4e6b8c;
 }
 
