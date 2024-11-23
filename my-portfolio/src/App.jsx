@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <nav className="nav-bar">
         <div className="home-nav">
-          <a href="/M">JENNA STOVER</a>
+          <a href="/MyWebPortfolio">JENNA STOVER</a>
         </div>
         <ul className="nav-items">
           <li><button onClick={() => scrollToSection('section-projects')}>PROJECTS</button></li>
@@ -78,6 +78,9 @@ function App() {
       </div>
       <h2 id="contact-header">~CONTACT ME~</h2>
       <div className="section-contact section" id="section-contact">
+        <div id="linkedin">
+          <img src="../images/linkedin.png" alt="linkedin" />
+        </div>
       </div>
     </div>
   );
