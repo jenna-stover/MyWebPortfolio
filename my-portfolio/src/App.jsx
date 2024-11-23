@@ -1,4 +1,5 @@
 import './App.css';
+import profilePic from './assets/profile-pic.PNG';
 
 function App() {
 
@@ -15,17 +16,18 @@ function App() {
     <div className="App">
       <nav className="nav-bar">
         <div className="home-nav">
-          <a href="/">JENNA STOVER</a>
+          <a href="/M">JENNA STOVER</a>
         </div>
         <ul className="nav-items">
           <li><button onClick={() => scrollToSection('section-projects')}>PROJECTS</button></li>
           <li><button onClick={() => scrollToSection('section-contact')}>CONTACT ME</button></li>
+          <li><a href="https://jenna-stover.github.io/index.html">CLASSWORK</a></li>
         </ul> 
       </nav>
       <div className="section-one section">
         <div className="image-container">
           <div className="tilted-background">
-            <img id="profile-img" src="images/profile-pic.PNG" alt="avatar"></img>  
+            <img id="profile-img" src={profilePic} alt="profile"></img>
           </div>
         </div>
         <div id="about-me">
@@ -38,13 +40,45 @@ function App() {
             forward to immersing myself into this field post-graduation and put my skills to use in a professional setting!</h2>
         </div>
       </div>
+      <h2 id="project-header">~MY PROJECTS~</h2>
       <div className="section-projects section" id="section-projects">
-        <h2>MY PROJECTS</h2>
+        <div className="project-one project">  
+          <div id="project-image">
+            <img src="https://placehold.co/800x400" alt="Placeholder" />
+          </div>
+          <div id="overlay">
+            <div id="text">
+              <h3>Project 1</h3>
+              <p>Description of Project 1</p>
+            </div>
+          </div>
+        </div>
+        <div className="project-one project">  
+          <div id="project-image">
+            <img src="https://placehold.co/800x400" alt="Placeholder" />
+          </div>
+          <div id="overlay">
+            <div id="text">
+              <h3>Project 2</h3>
+              <p>Description of Project 2</p>
+            </div>
+          </div>
+        </div>
+        <div className="project-one project">  
+          <div id="project-image">
+            <img src="https://placehold.co/800x400" alt="Placeholder" />
+          </div>
+          <div id="overlay">
+            <div id="text">
+              <h3>Project 3</h3>
+              <p>Description of Project 3</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <h2 id="contact-header">~CONTACT ME~</h2>
       <div className="section-contact section" id="section-contact">
-        <h2>CONTACT ME</h2>
       </div>
-      
     </div>
   );
 }

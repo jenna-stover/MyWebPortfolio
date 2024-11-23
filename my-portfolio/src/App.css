@@ -5,7 +5,7 @@
 .home-nav{
   margin-top:30px;
   font-weight: bold;
-  font-size:2rem;
+  font-size:3rem;
 }
 
 .home-nav a{
@@ -22,21 +22,21 @@
   justify-content: flex-end;
   gap:50px;
   padding-inline: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
 }
 
-.nav-items button {
+.nav-items button, .nav-items a {
   color: white;
   background: none;
   border: none;
   text-decoration: none;
-  font-size: 1rem;
   position: relative; /* Ensure the pseudo-element is positioned relative to the link */
   cursor: pointer;
   font: inherit;
+  font-size:x-large;
 }
 
-.nav-items button::after {
+.nav-items button::after, .nav-items a::after {
   content: '';
   position: absolute;
   bottom: 0; /* Position underline at the bottom of the text */
@@ -48,7 +48,7 @@
   transform: translateX(-50%);
 }
 
-.nav-items button:hover::after {
+.nav-items button:hover::after, .nav-items a:hover::after {
   width: 100%;
 }
 
@@ -61,14 +61,13 @@
   margin: auto;
   padding-top:30px;
   border-radius: 10px;
-  gap:60px;
   width: 90%;
   text-align: center;
-  justify-content: center;
 }
 
 #about-me h1, h2{
   font-weight: normal;
+  font-size:2.5rem;
 }
 
 #job-title{
@@ -110,18 +109,63 @@
   display: block;
 }
 
-.section-projects, .section-contact{
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding-bottom: 500px;
-  margin-top: 100px;
-}
-
-.section-projects h2, .section-contact h2{
+#project-header, #contact-header{
   color: black;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 150px;
+  flex-wrap: wrap;
 }
 
+.section-projects, .section-contact{
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  gap: 300px; 
+  color: black;
+  font-size: 1.5rem;
+  position: relative;
+  padding: 50px;
+}
+
+.project:hover #overlay {
+  opacity: 1;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#overlay {
+  flex: 1; 
+}
+
+#project-image img{
+  border-radius: 30px;
+}
+
+#text {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); 
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#overlay {
+  position: absolute;
+  height: 400px;
+  width: 800px;
+  opacity: 0;
+  transition: 1s ease;
+  background-color: #2f3854f0;
+  border-radius: 30px;
+}
 
 @media (max-width: 900px) {
   .section {
@@ -130,7 +174,6 @@
   }
 
   .image-container {
-    width: 80%; 
     max-width: 300px;
     margin-top: 15px; 
   }
