@@ -1,0 +1,78 @@
+.section-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 150px;
+}
+
+.contact-container, .skills-container{
+  flex: 2;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid #9AAFD0;
+  width:800px;
+  background-color: rgba(255, 255, 255, 0.125);
+  border-radius: 10px;
+}
+
+.contact{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  width: 100%;
+  height:200px;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+}
+
+.skill{
+  display: flex;
+  margin-bottom: 100px;
+  width: 100%;
+  height:200px;
+  justify-content: center;
+  align-items: center;
+  gap:50px;
+}
+
+.skill img{
+  width: 100px;
+  height: 200px;
+}
+
+#contact-header,#skills-header{
+  color: #9AAFD0;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 150px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.section-contact img { 
+  width:200px;
+}
+
+.section-contact a, p {
+  font-size: 2rem;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.section-contact a:hover{
+  background-color: rgba(240, 248, 255, 0.709);
+  border: 1px solid #2f3854f0;
+  color:black;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    gap: 10px;
+    margin-bottom: 200px;
+  }
+}

@@ -1,0 +1,57 @@
+.projects-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 150px;
+  margin-bottom: 200px;
+}
+
+#project-header{
+  color: white;
+  font-size: 2.8rem;
+  text-align: center;
+  margin-top: 150px;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.project {
+  gap: 300px; 
+  color: black;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+#overlay {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  height: 100%; 
+  width: 100%; 
+  opacity: 0;
+  transition: 0.3s ease; 
+  background-color: #9ab0d08e;
+  border-radius: 30px;
+  z-index: 2; 
+}
+
+.project:hover #overlay {
+  opacity: 1;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#project-image img{
+  border-radius: 30px;
+  z-index: 1;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+}
+
