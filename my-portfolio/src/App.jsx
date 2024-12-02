@@ -24,6 +24,7 @@ function App() {
         <ul className="nav-items">
           <li><button onClick={() => scrollToSection('project-header')}>PROJECTS</button></li>
           <li><button onClick={() => scrollToSection('contact-header')}>CONTACT ME</button></li>
+          <li><button onClick={() => scrollToSection('skills-header')}>SKILLS</button></li>
           <li><a href="https://jenna-stover.github.io/index.html">CLASSWORK</a></li>
         </ul> 
       </nav>

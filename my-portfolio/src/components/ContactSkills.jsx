@@ -4,8 +4,7 @@ import github from '../assets/github-icon.png';
 import gmail from '../assets/gmail-icon.png';
 import react from '../assets/react-logo.png';
 import javascript from '../assets/javascript-logo.png';
-import css from '../assets/css-logo.png';
-import html from '../assets/html-logo.png';
+import htmlcss from '../assets/html-css.png';
 
 const ContactSkills = () => {
   return (
@@ -36,10 +35,7 @@ const ContactSkills = () => {
             <img src={javascript} alt="javascript-logo" />
           </div>
           <div className="skill-three skill">
-            <img src={css} alt="css-html-logo" />
-          </div>
-          <div className="skill-four skill">
-            <img src={html} alt="css-html-logo" />
+            <img src={htmlcss} alt="html-css" />
           </div>
         </div>
       </div>
