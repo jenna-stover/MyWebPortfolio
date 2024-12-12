@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: 0.3s ease; 
+  transition: 0.5s ease; 
   background-color: #9ab0d0d4;
   border-radius: 30px;
   z-index: 2; 
