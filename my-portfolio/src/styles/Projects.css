@@ -7,24 +7,27 @@
 }
 
 #project-header{
-  padding-top: 50px;
+  padding-top: 20px;
   color: white;
   font-size: 2rem;
   text-align: center;
   margin-top: 150px;
   flex-wrap: wrap;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .project {
-  gap: 300px; 
   color: black;
   font-size: 1.5rem;
+  font-weight: 400;
   position: relative;
 }
 
 #overlay {
   position: absolute;
+  overflow-y: auto;
   top: 0; 
   left: 0; 
   width: 100%;
@@ -34,6 +37,9 @@
   background-color: #9ab0d0d4;
   border-radius: 30px;
   z-index: 2; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
 
 .project:hover #overlay {
@@ -42,19 +48,26 @@
   cursor: pointer;
 }
 
+#text {
+  width: 100%; 
+  padding: 10px;
+  z-index: 3;
+}
+
+#text h3{
+  font-size: 1.5rem;
+}
+
+#text p {
+  color: black;
+  font-size: 1.3rem;
+}
+
 #project-image img{
   border-radius: 30px;
   z-index: 1;
-  width: 500px;
-  height: 400px;
+  width: 550px;
+  height: 450px;
 }
 
-#text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 3;
-}
 

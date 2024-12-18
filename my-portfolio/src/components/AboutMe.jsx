@@ -6,7 +6,7 @@ const AboutMe = () => {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    if (step < 4) { 
+    if (step < 7) { 
       const timeoutDuration = step === 0 ? 1000 : 1500;
       const timeout = setTimeout(() => {
         setStep((prev) => prev + 1);
@@ -24,19 +24,28 @@ const AboutMe = () => {
       </div>
 
       <div className="text-container">
-      <h1 className={step > 0 ? 'show' : ''}>Hello!</h1>
-      <h1 className={step > 1 ? 'show' : ''}>My name is Jenna Stover</h1>
-      <h2 id="job-title" className={step > 2 ? 'show' : ''}>
-        {'•'} I'm a Front-end Web Developer and Designer {'•'}
-      </h2>
-      <div id="description" className={step > 3 ? 'show' : ''}>
-        I have a passion for front-end software engineering, and am currently in my senior year at the
-        University of South Carolina studying Computer Information Systems. I enjoy taking on challenging
-        tasks and continuously pushing myself when it comes to enhancing my technical skills. I am looking
-        forward to immersing myself into this field post-graduation and putting my skills to use in a
-        professional setting!
+        <h1 className={step > 0 ? 'show' : ''}>Hello!</h1>
+        <h1 className={step > 1 ? 'show' : ''}>My name is Jenna Stover</h1>
+        <h2 id="job-title" className={step > 2 ? 'show' : ''}>
+          {'•'} Front-end Web Developer and Designer {'•'}
+        </h2>
+        <div className="paragraphs">
+           <div id="description" className={step > 3 ? 'show' : ''}>
+            Currently, I am in my senior year at the University of South Carolina, pursuing a degree in Computer 
+            Information Systems, with graduation set for May 2025. </div>
+          <div id="description" className={step > 4 ? 'show' : ''}>
+            As I approach graduation, I am actively seeking job opportunities that will allow me to apply my skills 
+            in a professional setting and help fulfill my long-term goal of becoming a full-stack web developer.
+          </div>
+          <div id="description" className={step > 5 ? 'show' : ''}>
+            While my primary focus is currently on front-end development, I have also explored back-end technolgoies. I firmly
+            believe in being well-rounded in this field, as the front-end and back-end depend on each other.
+          </div>
+          <div id="description" className={step > 6 ? 'show' : ''}>
+            Thank you for visiting my portfolio. I look forward to the opportunity to work with you!
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   );
 };
