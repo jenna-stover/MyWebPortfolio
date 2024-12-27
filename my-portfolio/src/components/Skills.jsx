@@ -1,4 +1,4 @@
-import "../styles/ContactSkills.css";
+import "../styles/Skills.css";
 import react from '../assets/react-logo.png';
 import javascript from '../assets/javascript-logo.png';
 import css from '../assets/css-logo.png';

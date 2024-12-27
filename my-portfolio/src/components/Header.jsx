@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 import Resume from "../assets/my-resume.pdf";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -29,7 +31,7 @@ const Header = () => {
         </button>
         <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
           <li><button onClick={() => scrollToSection('project-header')}>PROJECTS</button></li>
-          <li><button onClick={() => scrollToSection('contact-header')}>CONTACT ME</button></li>
+          <li><button onClick={() => navigate('/contact-me')}>CONTACT ME</button></li>
           <li><button onClick={() => scrollToSection('skills-header')}>SKILLS</button></li>
           <li><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
         </ul> 
