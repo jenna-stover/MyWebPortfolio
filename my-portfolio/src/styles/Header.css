@@ -63,24 +63,6 @@
   display: none;  
 }
 
-.about-me{
-  padding-top: 125px;
-}
-
-.section{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; 
-  text-align: center;
-} 
-
-.footer{
-  margin-top:50px;
-  padding:20px;
-  background-color: #9aafd0c7;
-}
-
 @media (max-width: 900px) {
   .menu-toggle {
     display: block;
@@ -143,32 +125,4 @@
   .nav-items a:hover::after {
     width: 0; 
   }
-
-  .section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-container {
-    max-width: 300px;
-    margin-top: 15px; 
-  }
-
-  #about-me{
-    margin: 0;
-  }
-
-  .tilted-background{
-    display: hidden;
-  }
-
-  h1 {
-    font-size: 1.6rem; 
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
 }
-
-

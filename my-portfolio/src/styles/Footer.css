@@ -1,0 +1,17 @@
+.footer{
+  margin-top:80px;
+  padding:20px;
+  background-color: #9aafd0c7;
+}
+
+#contact-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#contact-links img{
+  width: 30px;
+  cursor: pointer;
+}

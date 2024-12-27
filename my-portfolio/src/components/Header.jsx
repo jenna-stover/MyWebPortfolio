@@ -1,14 +1,10 @@
-import './App.css';
 import React, { useState } from 'react';
-import Projects from './components/Projects';
-import ContactSkills from './components/ContactSkills';
-import AboutMe from './components/AboutMe';
-import Resume from "./assets/my-resume.pdf";
+import '../styles/Header.css';
+import Resume from "../assets/my-resume.pdf";
 
-
-function App() {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };  
@@ -19,11 +15,11 @@ function App() {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
     console.log(`No section found with ClassName: ${sectionId}`);
+    }
   }
-  };
 
   return (
-    <div className="App">
+    <div className="header">
       <nav className="nav-bar">
         <div className="home-nav">
           <a href="/MyWebPortfolio">JENNA STOVER</a>
@@ -38,19 +34,8 @@ function App() {
           <li><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
         </ul> 
       </nav>
-      <div className="about-me section">
-        <AboutMe />
-      </div>
-      <div className="section-projects section">
-        <Projects />
-      </div>
-      <div className="contact-skills section">
-        <ContactSkills />
-      </div>
-      <footer className="footer">@jenna-stover.github.io/MyWebPortfolio/</footer>
-
     </div>
   );
 }
 
-export default App;
+export default Header;

@@ -9,7 +9,7 @@ const Projects = () => {
       <h2 id="project-header">MY PROJECTS</h2>
       <div className="projects-container">
 
-        <a href="https://jenna-stover.github.io/PersonalProject1/">
+        <a href="https://jenna-stover.github.io/PersonalProject1/" target="_blank" rel="noreferrer">
           <div className="project-one project">  
             <div id="project-image">
               <img src={project1} alt="project-1" />
@@ -27,7 +27,7 @@ const Projects = () => {
           </div>
         </a>
 
-        <a href="https://node-final-project-cgfy.onrender.com">
+        <a href="https://node-final-project-cgfy.onrender.com" target="_blank" rel="noreferrer">
           <div className="project-two project">  
             <div id="project-image">
               <img src={project2} alt="project-2" />
@@ -35,15 +35,15 @@ const Projects = () => {
             <div id="overlay">
               <div id="text">
                 <h3>Project 2</h3>
-                <p>This project was an expansion from my final project for <em>CSCE 242 - Web Applications</em>, 
+                <p>This project expanded from my final project for <em>CSCE 242 - Web Applications</em>, 
                 where I developed a full-stack "Internship Organizer" integrating MongoDB for seamless data management. 
-                I expanded the scope beyond the original project of an "Internship Organizer", enhancing the UI, incorporating 
-                more features such as a progress bar and separate forms for adding/editing prospects, and enhancing functionality
-                by resolving some HTTP request method bugs to ensure successful addition, editing, and deletion of entries to the database.</p>
+                I enhanced the UI, added more features such as a progress bar and separate forms for adding/editing prospects, 
+                and improved overall functionality by ensuring proper GET, POST, PUT, and DELETE methods to the database.</p>
 
-                <p>Additionally, I developed this site to host all of my assignments and each part of the semester project for this course: 
-                  <a href="https://jenna-stover.github.io/index.html"><em>CSCE 242 - Web Applications</em></a></p>
-                <p><strong>Technologies Used: </strong>Javascript, HTML, CSS, MongoDB, Node.js</p>
+                <p>You can also check out the site I developed for <a href="https://jenna-stover.github.io/index.html"><em>CSCE 242 - Web Applications</em></a>, 
+                which showcases my original "Internship Organizer" project and hosts each assignment for the course.</p>
+
+                <p><strong>Technologies Used: </strong>Javascript, HTML, CSS, Node.js, Express, MongoDB, Mongoose</p>
               </div>
             </div>
           </div>
