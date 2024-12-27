@@ -27,7 +27,7 @@ const Projects = () => {
           </div>
         </a>
 
-        <a href="https://jenna-stover.github.io/index.html">
+        <a href="https://node-final-project-cgfy.onrender.com">
           <div className="project-two project">  
             <div id="project-image">
               <img src={project2} alt="project-2" />
@@ -35,10 +35,14 @@ const Projects = () => {
             <div id="overlay">
               <div id="text">
                 <h3>Project 2</h3>
-                <p>I developed this website for my <em>CSCE 242 - Web Applications</em> course. 
-                It hosts all course assignments, as well as my final project which features a user-friendly 
-                interface for tracking their internship application statuses, and allows users to add, edit, and delete entries.</p>
-                <p>The project incorporates server-side code, utilizing GET, POST, PUT, and DELETE HTTP request methods integrated with MongoDB for seamless data management.</p>
+                <p>This project was an expansion from my final project for <em>CSCE 242 - Web Applications</em>, 
+                where I developed a full-stack "Internship Organizer" integrating MongoDB for seamless data management. 
+                I expanded the scope beyond the original project of an "Internship Organizer", enhancing the UI, incorporating 
+                more features such as a progress bar and separate forms for adding/editing prospects, and enhancing functionality
+                by resolving some HTTP request method bugs to ensure successful addition, editing, and deletion of entries to the database.</p>
+
+                <p>Additionally, I developed this site to host all of my assignments and each part of the semester project for this course: 
+                  <a href="https://jenna-stover.github.io/index.html"><em>CSCE 242 - Web Applications</em></a></p>
                 <p><strong>Technologies Used: </strong>Javascript, HTML, CSS, MongoDB, Node.js</p>
               </div>
             </div>

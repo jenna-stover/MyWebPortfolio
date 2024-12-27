@@ -38,7 +38,7 @@ const AboutMe = () => {
             in a professional setting and help fulfill my long-term goal of becoming a full-stack web developer.
           </div>
           <div id="description" className={step > 5 ? 'show' : ''}>
-            While my primary focus is currently on front-end development, I have also explored back-end technolgoies. I firmly
+            While my primary focus is currently on front-end development, I have also explored back-end technolgies. I firmly
             believe in being well-rounded in this field, as the front-end and back-end depend on each other.
           </div>
           <div id="description" className={step > 6 ? 'show' : ''}>
