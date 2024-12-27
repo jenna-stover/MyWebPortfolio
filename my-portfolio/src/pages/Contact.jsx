@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 
 function Contact() {
   const { register, handleSubmit, reset } = useForm(); 
-  const [isSuccess, setIsSuccess] = useState(false); 
   const [result, setResult] = useState(null); 
   const accessKey = '3adb68e7-0c88-4e36-b7a8-0de8eda71880';
 
@@ -28,11 +27,11 @@ function Contact() {
       });
 
       const result = await response.json();
-      setIsSuccess(true);
-      setResult(result.message);
-      reset();
+      if (result.success) {
+        setResult(result.message);
+        reset();
+      }
     } catch (error) {
-      setIsSuccess(false);
       setResult('An error occurred while submitting the form.');
     }
   };
@@ -57,8 +56,6 @@ function Contact() {
           placeholder="Your Message"
         ></textarea>
         <button type="submit">Send Message</button>
-
-        {/* {isSuccess && <div className="success-message">Form submitted successfully!</div>} */}
         {result && <div className="result-message">{result}</div>}
       </form>
     </div>
