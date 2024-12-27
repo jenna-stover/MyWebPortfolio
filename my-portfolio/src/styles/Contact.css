@@ -1,18 +1,19 @@
-.contact-form{
-  padding-top: 125px;
-}
-
-
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #f9f9f92c;
+  padding: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+  width: 500px;
   margin: auto;
+  gap: 15px;
+}
+
+form h2,h3 {
+  color: white;
+  font-weight: 500;
 }
 
 /* Styling input fields and textarea */
@@ -25,37 +26,45 @@ form textarea {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 1rem;
-  background-color: #fff;
+  background-color: #ffffffb8;
   box-sizing: border-box;
 }
 
 form input[type="text"]:focus,
 form input[type="email"]:focus,
 form textarea:focus {
-  border-color: #007bff;
+  border-color: #E7BCD6;
   outline: none;
 }
 
 /* Styling the submit button */
 form button[type="submit"] {
-  background-color: #007bff;
-  color: white;
+  margin-top: 20px;
+  background-color: #E7BCD6;
+  color: black;
   border: none;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
 }
 
 form button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #e7bcd68e;
 }
 
 /* Styling for the result message */
 .result-message {
   margin-top: 15px;
   font-size: 1.2rem;
-  color: #007bff;
+  color: rgb(196, 247, 196);
   text-align: center;
+}
+
+@media (max-width: 900px) {
+  form {
+    width: 350px;
+  }
+
 }

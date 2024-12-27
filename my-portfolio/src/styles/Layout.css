@@ -10,6 +10,7 @@ header {
 }
 
 main {
+  margin-top: 125px;
   flex: 1 0 auto; 
 }
 

@@ -1,27 +1,28 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
 import Resume from "../assets/my-resume.pdf";
 
 const Header = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };  
 
-  const scrollToSection = (sectionId) => {
+  const handleScrollOrNav = (sectionId, path) => {
     const section = document.getElementById(sectionId);
-    if (section) {
+    if (location.pathname == path) {
       section.scrollIntoView({ behavior: 'smooth' });
     } else {
-    console.log(`No section found with ClassName: ${sectionId}`);
+      navigate(path);
     }
   }
 
   return (
-    <div className="header">
+    <header className="header">
       <nav className="nav-bar">
         <div className="home-nav">
           <a href="/MyWebPortfolio">JENNA STOVER</a>
@@ -30,13 +31,14 @@ const Header = () => {
         &#9776;
         </button>
         <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
-          <li><button onClick={() => scrollToSection('project-header')}>PROJECTS</button></li>
+          <li>
+            <button onClick={() => handleScrollOrNav('project-header', '/')}>PROJECTS</button></li>
           <li><button onClick={() => navigate('/contact-me')}>CONTACT ME</button></li>
-          <li><button onClick={() => scrollToSection('skills-header')}>SKILLS</button></li>
+          <li><button onClick={() => handleScrollOrNav('skills-header', '/')}>SKILLS</button></li>
           <li><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
         </ul> 
       </nav>
-    </div>
+    </header>
   );
 }
 

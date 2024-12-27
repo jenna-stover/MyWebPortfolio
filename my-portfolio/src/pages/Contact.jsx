@@ -40,6 +40,8 @@ function Contact() {
   return (
     <div className="contact-form section">
       <form onSubmit={handleSubmit(onSubmit)}>
+        <h2>Contact Me!</h2>
+        <h3>I would love to receive any feedback/inquiries you may have</h3>
         <input
           type="text"
           {...register('name', { required: true })}
@@ -56,7 +58,7 @@ function Contact() {
         ></textarea>
         <button type="submit">Send Message</button>
 
-        {isSuccess && <div className="success-message">Form submitted successfully!</div>}
+        {/* {isSuccess && <div className="success-message">Form submitted successfully!</div>} */}
         {result && <div className="result-message">{result}</div>}
       </form>
     </div>

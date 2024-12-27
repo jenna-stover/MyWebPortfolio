@@ -4,7 +4,7 @@
   justify-content: center; 
   gap: 100px;
   margin-bottom: 100px;
-  
+  padding: 10px;
 }
 
 
@@ -46,6 +46,8 @@
 
 #text h3 {
   margin-top: 0; /* Ensure there's no margin top for the h3 element */
+  color: black;
+  font-weight: 700;
 }
 
 .project:hover #overlay {
