@@ -74,14 +74,18 @@
 }
 
 @media (max-width: 900px) {
+  .home-nav {
+    font-size: 2rem;
+  }
+
   .menu-toggle {
     display: block;
     background: none;
     border: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
     position: absolute;
-    right: 20px;
+    right: 0;
     top: 30px;
     color: white;
   }
@@ -96,8 +100,7 @@
     width: 30%;
     background-color: rgba(211, 211, 211, 0.665);
     position: absolute;
-    top: 82px;
-    right: 0;
+    right: 10px;
     padding: 10px;
     z-index: 5; /* Ensure it's above other elements */
   }
