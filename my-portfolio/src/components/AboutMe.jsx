@@ -28,7 +28,7 @@ const AboutMe = () => {
           <h1 className={step > 0 ? 'show' : ''}>Hello!</h1>
           <h1 className={step > 1 ? 'show' : ''}>My name is Jenna Stover</h1>
           <h2 id="job-title" className={step > 2 ? 'show' : ''}>
-            {'•'} Front-end Web Developer and Designer {'•'}
+            {'•'} Web Developer {'•'}
           </h2>
           <div className="paragraphs">
             <div id="description" className={step > 3 ? 'show' : ''}>
@@ -39,8 +39,9 @@ const AboutMe = () => {
               in a professional setting and help fulfill my long-term goal of becoming a full-stack web developer.
             </div>
             <div id="description" className={step > 5 ? 'show' : ''}>
-              While my primary focus is currently on front-end development, I have also explored back-end technolgies. I firmly
-              believe in being well-rounded in this field, as the front-end and back-end depend on each other.
+              My  current focus is on frontend development, where I specialize in using React and JSX to create dynamic
+              and engaging user interfaces, along with CSS to bring my designs to life. However, I also have experience with server-side 
+              JavaScript using Node.js and have successfully integrated applications with databases, primarily MongoDB.
             </div>
             <div id="description" className={step > 6 ? 'show' : ''}>
               Thank you for visiting my portfolio. I look forward to the opportunity to work with you!
