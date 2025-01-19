@@ -6,7 +6,67 @@
   text-align: center;
 } 
 
+.projects, .skills {
+  margin-top: 150px;
+}
 
+#project-header {
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  font-weight: 600;
+}
+
+
+
+/* styling for Intersection Observer */
+@keyframes slide-from-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.skills-container.hidden {
+  opacity: 0;
+  transition: 0.7s ease-out;
+}
+
+.skills-container.visible {
+  opacity: 1;
+  animation: slide-from-left 0.7s ease-out;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+
+.project-one.hidden, .project-two.hidden {
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.project-one.visible, .project-two.visible {
+  opacity: 1;
+  animation: slide-from-bottom 0.5s ease-out;
+}
+
+
+
+
+/* stying for smaller screens */
 @media (max-width: 900px) {
   .section {
     flex-direction: column;

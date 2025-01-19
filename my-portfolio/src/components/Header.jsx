@@ -31,10 +31,8 @@ const Header = () => {
         &#9776;
         </button>
         <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
-          <li>
-            <button onClick={() => handleScrollOrNav('project-header', '/')}>PROJECTS</button></li>
+          <li><button onClick={() => handleScrollOrNav('project-header', '/')}>PROJECTS</button></li>
           <li><button onClick={() => navigate('/contact-me')}>CONTACT ME</button></li>
-          <li><button onClick={() => handleScrollOrNav('skills-header', '/')}>SKILLS</button></li>
           <li><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
         </ul> 
       </nav>
