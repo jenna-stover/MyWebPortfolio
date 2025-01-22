@@ -1,5 +1,6 @@
 import "../styles/AboutMe.css";
 import React, { useState, useEffect } from 'react';
+import Skills from '../components/Skills';
 import profilePic from '../assets/profile-pic.png';
 
 const AboutMe = () => {
@@ -15,20 +16,24 @@ const AboutMe = () => {
     }
   }, [step]);
 
+  useEffect(() => {
+    document.body.classList.add('about-page');
+    return () => {
+      document.body.classList.remove('about-page'); 
+    };
+  }, []);
+
   return (
     <div className="about-me-container">
       <div className="image-container">
-        <div className="tilted-background">
-          <img id="profile-img" src={profilePic} alt="profile"></img>
-        </div>
+        <img id="profile-img" src={profilePic} alt="profile"></img>
       </div>
-
       <div className="text-container">
         <div className="about-me-text">
           <h1 className={step > 0 ? 'show' : ''}>Hello!</h1>
           <h1 className={step > 1 ? 'show' : ''}>My name is Jenna Stover</h1>
           <h2 id="job-title" className={step > 2 ? 'show' : ''}>
-            {'•'} Web Developer {'•'}
+            {'•'} Aspriring Web Developer {'•'}
           </h2>
           <div className="paragraphs">
             <div id="description" className={step > 3 ? 'show' : ''}>

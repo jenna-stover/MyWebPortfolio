@@ -18,7 +18,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div>@jenna-stover.github.io/MyWebPortfolio/</div>
+        <div id="copyright">&copy;jenna-stover.github.io/MyWebPortfolio/</div>
     </footer>
     )
 }

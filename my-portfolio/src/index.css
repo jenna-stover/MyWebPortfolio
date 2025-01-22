@@ -4,12 +4,39 @@ html,body{
   margin:0;
 }
 
+@font-face {
+  font-family:'Glametrix';
+  src: url('../src/assets/Glametrix.otf') format('opentype');
+}
+
+@font-face {
+  font-family:'Glametrix-Bold';
+  src: url('../src/assets/Glametrix-Bold.otf') format('opentype');
+}
+
 body {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-image: url('./assets/custom-background.png');
-  background-size: cover;
-  background-attachment: fixed; 
-  background-position: center; 
+  font-family:'Glametrix';
+  background: rgb(175,217,218);
+  background: radial-gradient(circle, rgba(175,217,218,1) 0%, rgba(13,30,75,1) 86%);
   position: relative;
+  cursor: url("http://www.w3.org/2000/svg"), auto;
   z-index: 0;
 } 
+
+.contact-page {
+  background: radial-gradient(circle, rgb(237, 237, 237) 0%, rgb(96, 94, 94) 86%);
+  background-size: cover;
+  background-position: center;
+}
+
+.about-page {
+  background: radial-gradient(circle, rgb(231, 201, 224) 0%, rgb(66, 59, 76) 86%);
+  background-size: cover;
+  background-position: center;
+}
+
+.projects-page {
+  background: radial-gradient(circle, rgb(193, 215, 208) 0%, rgb(24, 58, 53) 86%);
+  background-size: cover;
+  background-position: center;
+}

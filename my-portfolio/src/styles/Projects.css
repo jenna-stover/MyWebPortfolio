@@ -1,0 +1,29 @@
+.project-one.hidden, .project-two.hidden, .project-three.hidden {
+  opacity: 0;
+  transition: 0.7s ease-out;
+}
+
+.project-one.visible, .project-two.visible, .project-three.visible {
+  opacity: 1;
+  animation: slide-from-bottom 0.7s ease-out forwards;
+}
+
+#project-header {
+  font-family: 'Glametrix-Bold';
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+
+@keyframes slide-from-bottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}
+

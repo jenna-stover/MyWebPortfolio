@@ -3,9 +3,8 @@
   top: 0; 
   left: 0; 
   width: 100%; 
-  background-color: #fff; 
-  z-index: 1000; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .nav-bar{
@@ -14,32 +13,25 @@
   width: 100%; 
   z-index: 5; 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.675);
-  padding-top:30px;
-}
-
-.home-nav{
-  font-weight: bold;
-  font-size:2.2rem;
+  background-color: rgba(0, 0, 0, 0.182);
 }
 
 .home-nav a{
+  font-family: 'Glametrix-Bold';
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 1.5px black;
   text-decoration: none;
-  padding-left: 25px;
+  padding: 15px;
 }
 
 .nav-items {
   display: flex; 
   list-style: none;
   margin: 0;
-  padding-top: 10px;
   justify-content: flex-end;
   align-items: center;
-  gap:25px;
+  gap:50px;
   padding-inline: 50px;
-  margin-bottom: 25px;
 }
 
 .nav-items button, .nav-items a {
@@ -49,8 +41,7 @@
   text-decoration: none;
   position: relative;
   cursor: pointer;
-  font: inherit;
-  font-size:1rem;
+  font-size:1.3rem;
 }
 
 .nav-items button::after, .nav-items a::after {
@@ -60,7 +51,7 @@
   left: 50%;
   width: 0;
   height: 1px; 
-  background-color:#b5dcde; 
+  background-color:rgb(199, 199, 199); 
   transition: 0.3s ease; 
   transform: translateX(-50%);
 }
@@ -74,8 +65,12 @@
 }
 
 @media (max-width: 900px) {
+
+  .nav-bar{
+    padding-bottom: 40px;
+  }
   .home-nav {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .menu-toggle {
@@ -90,19 +85,17 @@
     color: white;
   }
 
-  .nav-bar{
-    padding-bottom: 10px;
-  }
-
   .nav-items {
     display: none;
     flex-direction: column;
-    width: 30%;
+    width: 25%;
     background-color: rgba(211, 211, 211, 0.665);
     position: absolute;
     right: 10px;
+    top: 78px;
     padding: 10px;
-    z-index: 5; /* Ensure it's above other elements */
+    border: 1px solid black;
+    z-index: 5; 
   }
 
   .nav-items.open {
@@ -118,7 +111,6 @@
     border: none;
     font-size: 1.2rem;
     color: #000;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
   }

@@ -1,5 +1,5 @@
 import '../styles/Contact.css'
-import { useState } from 'react'; 
+import { useState, useEffect } from 'react'; 
 import { useForm } from 'react-hook-form'; 
 
 function Contact() {
@@ -36,24 +36,32 @@ function Contact() {
     }
   };
 
+  useEffect(() => {
+    document.body.classList.add('contact-page');
+    return () => {
+      document.body.classList.remove('contact-page'); 
+    };
+  }, []);
+
+
   return (
-    <div className="contact-form section">
+    <div className="contact-container">
+      <h1>Contact Me!</h1>
+      <h2>I would love to receive any feedback/inquiries you may have about my portfolio ☺</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <h2>Contact Me!</h2>
-        <h3>I would love to receive any feedback/inquiries you may have</h3>
         <input
           type="text"
           {...register('name', { required: true })}
-          placeholder="Your Name"
+          placeholder="Name"
         />
         <input
           type="email"
           {...register('email', { required: true })}
-          placeholder="Your Email"
+          placeholder="Email"
         />
         <textarea
           {...register('message', { required: true })}
-          placeholder="Your Message"
+          placeholder="Message"
         ></textarea>
         <button type="submit">Send Message</button>
         {result && <div className="result-message">{result}</div>}
