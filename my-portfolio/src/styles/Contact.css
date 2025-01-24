@@ -1,9 +1,9 @@
 .contact-container {
-  background-color: rgba(255, 255, 255, 0.034);
+  background-color: #6c6a76ce;
   padding: 50px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  /* border-radius: 5px; */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  width: 400px;
   margin: auto;
   text-align: center;
   border: 1px solid black;
@@ -41,8 +41,7 @@ form textarea:focus {
 }
 
 form button[type="submit"] {
-  background-color: #6c6a76;
-  color: white;
+  background-color: #AFADAD;
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
@@ -50,26 +49,32 @@ form button[type="submit"] {
   font-size: 1.3rem;
   transition: 0.3s ease;
   font-family: inherit;
-  width: 50%;
+  width: 35%;
   margin: 0 auto;
 }
 
 form button[type="submit"]:hover {
   background-color: #6c6a7684;
-  border-color: #3498db;
   box-shadow: 0 0 10px white;
+  color: white;
 }
 
 .result-message {
   margin-top: 15px;
-  font-size: 1.2rem;
-  color: rgb(46, 83, 46);
+  font-size: 1.3rem;
+  color: rgb(183, 236, 183);
   text-align: center;
 }
 
 @media (max-width: 900px) {
-  form {
-    width: 350px;
+  .contact-container {
+    width: 250px;
+  }
+
+  form button[type="submit"] {
+    font-size: 1.1rem;
+    padding: 5px;
+    width: 40%;
   }
 
 }

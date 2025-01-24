@@ -22,6 +22,11 @@
   -webkit-text-stroke: 1.5px black;
   text-decoration: none;
   padding: 15px;
+  transition: 0.3s ease;
+}
+
+.home-nav a:hover {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.706);
 }
 
 .nav-items {
@@ -60,6 +65,7 @@
   width: 100%;
 }
 
+
 .menu-toggle { 
   display: none;  
 }
@@ -88,13 +94,11 @@
   .nav-items {
     display: none;
     flex-direction: column;
-    width: 25%;
     background-color: rgba(211, 211, 211, 0.665);
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 78px;
     padding: 10px;
-    border: 1px solid black;
     z-index: 5; 
   }
 
@@ -118,6 +122,7 @@
   .nav-items button:hover,
   .nav-items a:hover {
     background-color: #ccc; 
+    padding-inline: 10px;
     width: 100%;
   }
 

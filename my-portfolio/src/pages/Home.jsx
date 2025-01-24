@@ -1,7 +1,7 @@
 import '../styles/Home.css';
+import { FaProjectDiagram, FaUser, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Resume from "../assets/my-resume.pdf";
-import Footer from "../components/Footer";
 
 export default function Home() {
   
@@ -15,33 +15,41 @@ export default function Home() {
           <h1 id="welcome-text">Welcome to My Portfolio!</h1>
         </div>
         <div className="sub-container">
-          <div className="options-title">
+          <div id="options-title">
             <h2>Are you looking to...</h2>
           </div>
           <div className="options-container">
-            <div className="option">
-              <p>Check out my projects: </p>
-              <p id="link"><Link to="/projects">click here!</Link></p>
-            </div>
-            <div className="option">
-              <p>Learn more about me: </p>
-              <p id="link"><Link to="/about-me">click here!</Link></p>
-            </div>
-            <div className="option">
-              <p>View my resume: </p>
-              <p id="link"><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">click here!</a></p>
-            </div>
-            
-            <div className="option">
-              <p>Contact me: </p>
-              <p id="link"><Link to="/contact-me">click here!</Link></p>
-            </div>
+            <Link to="/projects" className="option-card">
+              <div className="option-content">
+                <FaProjectDiagram size={30} />
+                <h3>Projects</h3>
+                <p>Explore my latest work!</p>
+              </div>
+            </Link>
+            <Link to="/about-me" className="option-card">
+              <div className="option-content">
+                <FaUser size={30} />
+                <h3>About Me</h3>
+                <p>Learn more about who I am.</p>
+              </div>
+            </Link>
+            <a href={Resume} target="_blank" rel="noopener noreferrer" className="option-card">
+              <div className="option-content">
+                <FaFileAlt size={30} />
+                <h3>Resume</h3>
+                <p>Check out my professional experience.</p>
+              </div>  
+            </a>
+            <Link to="/contact-me" className="option-card">
+              <div className="option-content">
+                <FaEnvelope size={30} />
+                  <h3>Contact Me</h3>
+                  <p>Send me any inquiries/feedback you have!</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div> 
   );
 }

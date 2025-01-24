@@ -20,10 +20,10 @@ const Header = () => {
         &#9776;
         </button>
         <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
-          <li><Link to="/about-me">ABOUT ME</Link></li>
-          <li><Link to="/projects">PROJECTS</Link></li>
-          <li><Link to="/contact-me">CONTACT ME</Link></li>
-          <li><a id="resume" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
+          <li><Link to="/about-me" className="nav-item">ABOUT ME</Link></li>
+          <li><Link to="/projects" className="nav-item">PROJECTS</Link></li>
+          <li><Link to="/contact-me" className="nav-item">CONTACT ME</Link></li>
+          <li><a className="nav-item" href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
         </ul> 
       </nav>
     </header>
