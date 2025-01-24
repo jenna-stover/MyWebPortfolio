@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/MyWebPortfolio/static/css/main.aeae20f6.css",
-    "main.js": "/MyWebPortfolio/static/js/main.b2c55cc9.js",
+    "main.css": "/MyWebPortfolio/static/css/main.c658e8be.css",
+    "main.js": "/MyWebPortfolio/static/js/main.45784414.js",
     "static/media/profile-pic.png": "/MyWebPortfolio/static/media/profile-pic.aea2777f04392fa650c9.png",
     "static/media/project2.png": "/MyWebPortfolio/static/media/project2.1c86a080ccd6e3c34e0d.png",
     "static/media/my-resume.pdf": "/MyWebPortfolio/static/media/my-resume.c861f46d755b368d884b.pdf",
@@ -19,11 +19,11 @@
     "static/media/javascript-logo.png": "/MyWebPortfolio/static/media/javascript-logo.c5673894e81ac648da9d.png",
     "static/media/linkedin-icon.png": "/MyWebPortfolio/static/media/linkedin-icon.68ac41e1459436bfd38f.png",
     "index.html": "/MyWebPortfolio/index.html",
-    "main.aeae20f6.css.map": "/MyWebPortfolio/static/css/main.aeae20f6.css.map",
-    "main.b2c55cc9.js.map": "/MyWebPortfolio/static/js/main.b2c55cc9.js.map"
+    "main.c658e8be.css.map": "/MyWebPortfolio/static/css/main.c658e8be.css.map",
+    "main.45784414.js.map": "/MyWebPortfolio/static/js/main.45784414.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeae20f6.css",
-    "static/js/main.b2c55cc9.js"
+    "static/css/main.c658e8be.css",
+    "static/js/main.45784414.js"
   ]
 }
