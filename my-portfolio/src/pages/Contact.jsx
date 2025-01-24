@@ -47,7 +47,7 @@ function Contact() {
   return (
     <div className="contact-container">
       <h1>Contact Me!</h1>
-      <h2>I would love to receive any feedback/inquiries you may have about my portfolio ☺</h2>
+      <h2>I welcome any feedback or inquiries you may have about my portfolio, as well as any job opportunities you'd like to discuss!</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           type="text"

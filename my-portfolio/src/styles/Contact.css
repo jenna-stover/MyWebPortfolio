@@ -77,4 +77,19 @@ form button[type="submit"]:hover {
     width: 40%;
   }
 
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+
+  .contact-container h1 {
+    font-size: 1.3rem;
+  }
+
+  .contact-container h2 {
+    font-size: 1.1rem;
+  }
+
 }

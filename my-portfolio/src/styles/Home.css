@@ -47,6 +47,7 @@
 
 #welcome-text {
   font-size: 4rem;
+  padding-inline: 10px;
   animation: fadeInFromEdges 2.5s;
 }
 
@@ -142,6 +143,10 @@
 
   .option-card {
     width: 150px;
+  }
+
+  .home-header {
+    font-size: 2.2rem;
   }
 
 }
