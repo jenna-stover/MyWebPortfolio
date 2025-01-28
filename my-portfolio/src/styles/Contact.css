@@ -1,12 +1,28 @@
 .contact-container {
-  background-color: #6c6a76ce;
+  background-color: #7e7c8aaf;
   padding: 50px;
-  /* border-radius: 5px; */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   width: 400px;
   margin: auto;
   text-align: center;
   border: 1px solid black;
+  border-radius: 5px;
+  animation: fadeInBounce 1s ease-out forwards;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 form {

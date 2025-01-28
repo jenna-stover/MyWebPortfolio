@@ -17,7 +17,7 @@ html,body{
 body {
   font-family:'Glametrix';
   background: rgb(175,217,218);
-  background: radial-gradient(circle, rgb(169, 195, 235) 0%, rgb(34, 45, 74) 86%);
+  background: radial-gradient(circle, rgb(201, 217, 242) 0%, rgb(40, 52, 83) 86%);
   position: relative;
   cursor: url("http://www.w3.org/2000/svg"), auto;
   z-index: 0;
@@ -29,7 +29,7 @@ a, button {
 }
 
 .contact-page {
-  background: radial-gradient(circle, rgb(237, 237, 237) 0%, rgb(122, 119, 119) 86%);
+  background: radial-gradient(circle, rgb(237, 237, 237) 0%, rgb(196, 195, 195) 50%, rgb(88, 86, 86) 90%);
   background-size: cover;
   background-position: center;
 }
