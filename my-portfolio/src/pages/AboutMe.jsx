@@ -1,7 +1,7 @@
 import "../styles/AboutMe.css";
 import React, { useState, useEffect } from 'react';
 import Skills from '../components/Skills';
-import profilePic from '../assets/profile-pic.png';
+import profilePic from '../assets/profile-pic.PNG';
 
 const AboutMe = () => {
   const [step, setStep] = useState(0);
@@ -37,16 +37,15 @@ const AboutMe = () => {
           </h2>
           <div className="paragraphs">
             <div id="description" className={step > 3 ? 'show' : ''}>
-              Currently, I am in my senior year at the University of South Carolina, pursuing a degree in Computer 
-              Information Systems, with graduation set for May 2025. </div>
+              I graduated from the University of South Carolina in May 2025 with a B.S. in Computer Information Systems from the Molinaroli College of Engineering and Computing. </div>
             <div id="description" className={step > 4 ? 'show' : ''}>
-              As I approach graduation, I am actively seeking job opportunities that will allow me to apply my skills 
-              in a professional setting and help fulfill my long-term goal of becoming a full-stack web developer.
+              Since then, I have continued working my remote administrative job while actively pursuing opportunities to begin my career in web development.
+              I am looking for something more in-tune with my skills and passions, where I can grow as a web developer and contribute to meaningful, creative projects alongside
+              a team of like-minded individuals.
             </div>
             <div id="description" className={step > 5 ? 'show' : ''}>
-              My  current focus is on frontend development, where I specialize in using React and JSX to create dynamic
-              and engaging user interfaces, along with CSS to bring my designs to life. However, I also have experience with server-side 
-              JavaScript using Node.js and have successfully integrated applications with databases, primarily MongoDB.
+              I have a focus in frontend development, where I specialize in using React and JSX to create dynamic
+              and engaging user interfaces, along with CSS to bring my designs to life. However, I also have experience with backend development, and have successfully integrated MongoDB databases, as well as APIs, into my full-stack projects. 
             </div>
             <div id="description" className={step > 6 ? 'show' : ''}>
               Thank you for visiting my portfolio. I look forward to the opportunity to work with you!

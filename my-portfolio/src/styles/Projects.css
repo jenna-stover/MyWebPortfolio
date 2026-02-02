@@ -1,9 +1,9 @@
-.project-one.hidden, .project-two.hidden, .project-three.hidden {
+.project-one.hidden, .project-two.hidden, .project-three.hidden, .project-four.hidden, .project-five.hidden {
   opacity: 0;
   transition: 0.7s ease-out;
 }
 
-.project-one.visible, .project-two.visible, .project-three.visible {
+.project-one.visible, .project-two.visible, .project-three.visible, .project-four.visible, .project-five.visible {
   opacity: 1;
   animation: slide-from-bottom 0.7s ease-out forwards;
 }
@@ -12,9 +12,14 @@
   font-family: 'Glametrix-Bold';
   text-align: center;
   font-size: 2.2rem;
-  margin-bottom: 50px;
 }
 
+#project-header2 {
+  font-family: 'Glametrix-Bold';
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
 @keyframes slide-from-bottom {
   0% {
     transform: translateY(100%);
