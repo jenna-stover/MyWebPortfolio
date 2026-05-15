@@ -1,52 +1,76 @@
 import '../styles/Home.css';
-import { FaProjectDiagram, FaUser, FaFileAlt, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Resume from "../assets/my-resume.pdf";
+import cardBackgroundOne from '../assets/card-bkg1.jpg';
+import cardBackgroundTwo from '../assets/card-bkg2.jpg';
+import cardBackgroundThree from '../assets/card-bkg3.jpg';
+import cardBackgroundFour from '../assets/card-bkg4.jpg';
 
 export default function Home() {
   
   return (
     <div>
-      <header className="home-header">
-        <a href="/MyWebPortfolio">JENNA STOVER</a>
-      </header>
       <div className="main-container">
         <div>
-          <h1 id="welcome-text">Welcome to My Portfolio!</h1>
+          <h1 id="welcome-text">Jenna Stover's Web Portfolio</h1>
         </div>
         <div className="sub-container">
-          <div id="options-title">
-            <h2>Are you looking to...</h2>
-          </div>
           <div className="options-container">
-            <Link to="/projects" className="option-card">
+            <div className="card-wrapper">
+              <img src={cardBackgroundTwo} className="card-bg-svg" alt="" />
+              <Link to="/projects" className="option-card">
               <div className="option-content">
-                <FaProjectDiagram size={30} />
-                <h3>Projects</h3>
-                <p>Explore my latest work!</p>
+                <div id="card-title">
+                  <h3>Projects</h3>
+                </div>
+                <div id="card-subtitle">
+                  <p>Explore my latest work</p>
+                </div>
               </div>
             </Link>
-            <Link to="/about-me" className="option-card">
+            </div>
+            
+            <div className="card-wrapper">
+              <img src={cardBackgroundThree} className="card-bg-svg" alt="" />
+              <Link to="/about-me" className="option-card">
+                  <div className="option-content">
+                    <div id="card-title">
+                      <h3>About Me</h3>
+                    </div>
+                    <div id="card-subtitle">
+                      <p>Learn more about who I am</p>
+                    </div>
+                  </div>
+              </Link>
+            </div>
+            <div className="card-wrapper">
+              <img src={cardBackgroundOne} className="card-bg-svg" alt="" />
+              <a href={Resume} target="_blank" rel="noopener noreferrer" className="option-card">
+                <div className="option-content">
+                  <div id="card-title">
+                      <h3>Resume</h3>
+                  </div>
+                  <div id="card-subtitle">
+                    <p>Check out my professional experience</p>
+                  </div>
+                </div>  
+              </a>
+            </div>
+           
+            <div className="card-wrapper">
+              <img src={cardBackgroundFour} className="card-bg-svg" alt="" />
+              <Link to="/contact-me" className="option-card">
               <div className="option-content">
-                <FaUser size={30} />
-                <h3>About Me</h3>
-                <p>Learn more about who I am.</p>
-              </div>
-            </Link>
-            <a href={Resume} target="_blank" rel="noopener noreferrer" className="option-card">
-              <div className="option-content">
-                <FaFileAlt size={30} />
-                <h3>Resume</h3>
-                <p>Check out my professional experience.</p>
-              </div>  
-            </a>
-            <Link to="/contact-me" className="option-card">
-              <div className="option-content">
-                <FaEnvelope size={30} />
+                <div id="card-title">
                   <h3>Contact Me</h3>
-                  <p>Send me any inquiries/feedback you have!</p>
+                </div>
+                <div id="card-subtitle">
+                  <p>Send me any inquiries/feedback you have</p>
+                </div>
               </div>
             </Link>
+            </div>
+            
           </div>
         </div>
       </div>

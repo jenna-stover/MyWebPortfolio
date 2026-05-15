@@ -4,28 +4,10 @@
   align-items: center;   
   height: 100vh;            
   text-align: center;
-  margin-top: 75px;          
-}
-
-.home-header {
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.home-header a{
-  font-family: 'Glametrix-Bold';
-  color: white;
-  -webkit-text-stroke: 1.5px black;
-  text-decoration: none;
-  padding: 5px;
-  transition: 0.3s ease;
-}
-
-.home-header a:hover {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.706);
+  background-image: url('../assets/lined-page.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 60px;
 }
 
 @keyframes fadeInFromEdges { 
@@ -41,18 +23,17 @@
 }
 
 #welcome-text, #options-title {
-  font-family: 'Glametrix-Bold';
+  font-family:'lavish';
 }
 
 
 #welcome-text {
-  font-size: 4rem;
-  padding-inline: 10px;
-  animation: fadeInFromEdges 2.5s;
+  font-size: 3rem;
+  padding-top: 20px;
 }
 
 #options-title {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .sub-container {
@@ -65,7 +46,7 @@
 
 .options-container {
   display: flex;
-  gap: 20px;
+  gap: 100px;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -81,27 +62,70 @@
   }
 }
 
+.card-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-bg-svg {
+  position: absolute;
+  width: 120%;  
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 5px;
+}
+
 .option-card {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 200px;
   height: 175px;
   padding: 5px;
-  background-color: #f7f7f746;
   border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   text-decoration: none;
   color: black;
   opacity: 0;
   animation: fadeInUp 0.7s ease forwards;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+#card-title {
+  font-family: 'lavish';
+  background-color: #f7f7f7;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  font-size: 1.5rem;
+  padding-inline: 10px;
+}
+
+#card-subtitle {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  bottom: -40px;     
+  left: 0;
+  right: 0;
+  font-family: 'body-font';
+  background-color: #f7f7f7c6;
+  width: 100%;
 }
 
 .option-card:hover {
-  box-shadow: 0 0 10px #9cbce9;
-  background-color: #f7f7f76d;
+  transform: scale(1.05);
+}
+
+.option-card:hover #card-subtitle {
+  opacity: 1;
+  transform: translateY(-20px);
 }
 
 .option-card:nth-child(1) {

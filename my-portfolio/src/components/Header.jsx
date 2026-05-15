@@ -16,18 +16,26 @@ const Header = () => {
 
   return (
     <header className="header">
+      <div className="home-nav">
+        <a href="/MyWebPortfolio">Jenna's Portfolio</a>
+      </div>
       <nav className="nav-bar">
-        <div className="home-nav">
-          <a href="/MyWebPortfolio">JENNA STOVER</a>
-        </div>
         <button className="menu-toggle" onClick={toggleMenu}>
         &#9776;
         </button>
         <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
-          <li><Link to="/about-me" onClick={handleNavClick} className="nav-item">ABOUT ME</Link></li>
-          <li><Link to="/projects" onClick={handleNavClick} className="nav-item">PROJECTS</Link></li>
-          <li><Link to="/contact-me" onClick={handleNavClick} className="nav-item">CONTACT ME</Link></li>
-          <li><a className="nav-item" onClick={handleNavClick} href={Resume} target="_blank" rel="noopener noreferrer">RESUME</a></li>
+          <li>
+            <Link to="/about-me" onClick={handleNavClick} className="nav-item about">About Me</Link>
+          </li>
+          <li>
+            <Link to="/projects" onClick={handleNavClick} className="nav-item project">Projects</Link>
+          </li>
+          <li>
+            <Link to="/contact-me" onClick={handleNavClick} className="nav-item contact">Contact</Link>
+          </li>
+          <li>
+            <a className="nav-item resume" onClick={handleNavClick} href={Resume} target="_blank" rel="noopener noreferrer">Resume</a>
+          </li>
         </ul> 
       </nav>
     </header>
