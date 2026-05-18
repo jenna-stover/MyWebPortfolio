@@ -1,5 +1,5 @@
 import '../styles/Contact.css'
-import { useState, useEffect } from 'react'; 
+import { useState } from 'react'; 
 import { useForm } from 'react-hook-form'; 
 
 function Contact() {
@@ -36,36 +36,30 @@ function Contact() {
     }
   };
 
-  useEffect(() => {
-    document.body.classList.add('contact-page');
-    return () => {
-      document.body.classList.remove('contact-page'); 
-    };
-  }, []);
-
-
   return (
-    <div className="contact-container">
-      <h1>Contact Me!</h1>
-      <h2>I welcome any feedback or inquiries you may have about my portfolio, as well as any job opportunities you'd like to discuss!</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
-          type="text"
-          {...register('name', { required: true })}
-          placeholder="Name"
-        />
-        <input
-          type="email"
-          {...register('email', { required: true })}
-          placeholder="Email"
-        />
-        <textarea
-          {...register('message', { required: true })}
-          placeholder="Message"
-        ></textarea>
-        <button type="submit">Send Message</button>
-        {result && <div className="result-message">{result}</div>}
-      </form>
+    <div className="contact-page">
+      <div className="contact-container">
+        <h1>Contact Me</h1>
+        <h2>I welcome any feedback or inquiries you may have about my portfolio, as well as any job opportunities you'd like to discuss!</h2>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            type="text"
+            {...register('name', { required: true })}
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            {...register('email', { required: true })}
+            placeholder="Email"
+          />
+          <textarea
+            {...register('message', { required: true })}
+            placeholder="Message"
+          ></textarea>
+          <button type="submit">Send Message</button>
+          {result && <div className="result-message">{result}</div>}
+        </form>
+      </div>
     </div>
   )
 }

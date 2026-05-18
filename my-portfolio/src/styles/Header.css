@@ -1,6 +1,13 @@
 .header { 
   width: 100%; 
   font-weight: bold;
+  pointer-events: none;
+}
+
+.menu-toggle,
+.nav-items.open,
+.nav-items.open .nav-item, .home-nav a {
+  pointer-events: all;
 }
 
 .nav-bar {
@@ -8,9 +15,13 @@
   bottom: 0;     
   width: 100%;
   height: 100px; 
-  z-index: 5;
+  z-index: 10;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  background-color: rgba(0, 0, 0, 0.182);
+}
+
+.home-nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 .home-nav a{
@@ -24,7 +35,7 @@
 }
 
 .home-nav a:hover {
-  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.706);
+  text-shadow: 0 1px 3px rgba(218, 189, 159, 0.706);
 }
 
 .nav-items {
@@ -37,130 +48,105 @@
   height: 100%;    
   margin: 0;
   padding: 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease;
+  pointer-events: none;
 }
+
+.nav-items.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
 
 .nav-items li {
   flex: 1;            
   height: 100%;
   border: 2px solid white;
-}
-
-.nav-items a {
   color: black;
-  border: none;
-  text-decoration: none;
-  position: relative;
   cursor: pointer;
-  top: 10px;
   font-size: 2rem;
   display: flex;           
   align-items: center;
   justify-content: center;
-  background-color: white;
   width: 80%;
   margin: 0 auto;
+  padding: 10px 15px;
+  transition: 0.3s ease;
 }
 
-li:has(.nav-item.about) {
+.nav-items li:hover {
+  padding: 25px 15px;
+  transform: translateY(-10px);
+}
+
+.nav-items li span {
+  transform: translateY(-15px);
+  background-color: white;
+  padding: 3px 15px;
+}
+
+.nav-item.about {
   background-image: url('../assets/card-bkg3.jpg');
   background-size: cover;
   background-position: center;
 }
 
-li:has(.nav-item.project) {
+.nav-item.project {
   background-image: url('../assets/card-bkg2.jpg');
   background-size: cover;
   background-position: center;
 }
 
-li:has(.nav-item.contact) {
+.nav-item.contact {
   background-image: url('../assets/card-bkg4.jpg');
   background-size: cover;
   background-position: center;
 }
 
-li:has(.nav-item.resume) {
+.nav-item.resume {
   background-image: url('../assets/card-bkg1.jpg');
   background-size: cover;
   background-position: center;
 }
 
-
-
-.menu-toggle { 
-  display: none;  
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   background: none;
   border: none;
-  font-size: 2.5rem;
-  position: absolute;
-  right: 0;
-  top: 30px;
-  color: white; 
-  -webkit-text-stroke: 1px black;
+  cursor: pointer;
+  margin: 30px;
+  padding: 5px;
+}
+
+.menu-toggle div {
+  width: 60px;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open div:nth-child(1) {
+  transform: translateY(9px) rotate(30deg);
+}
+
+.menu-toggle.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open div:nth-child(3) {
+  transform: translateY(-9px) rotate(-30deg);
 }
 
 @media (max-width: 900px) {
-  .nav-bar {
-    padding-bottom: 40px;
-  }
 
   .home-nav {
     font-size: 2.2rem;
   }
 
-  .menu-toggle {
-    display: block;
-  }
 
-  .nav-items {
-    display: flex;
-    border-radius: 0 0 10px 10px;
-    flex-direction: column;
-    background-color: rgba(211, 211, 211, 0.665);
-    position: absolute;
-    right: 0;
-    top: 78px;
-    z-index: 5;
-    opacity: 0; 
-    transform: translateY(-20px);
-    pointer-events: none; 
-    transition: 0.3s ease-in-out;
-  }
-
-  .nav-items.open {
-    opacity: 1; 
-    transform: translateY(0); 
-    pointer-events: auto; 
-  }
-
-  .nav-items button,
-  .nav-items a {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    padding-inline: 20px;
-    color: #000;
-    cursor: pointer;
-    transition: 0.5s ease;
-  }
-
-  .nav-items button:hover,
-  .nav-items a:hover {
-    background-color: #ccc;
-    border-radius: 5px;
-    padding-inline: 20px;
-  }
-
-  .nav-items button::after,
-  .nav-items a::after {
-    content: none; 
-  }
-
-  .nav-items button:hover::after,
-  .nav-items a:hover::after {
-    width: 0; 
-  }
 }

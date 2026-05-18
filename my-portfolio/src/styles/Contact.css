@@ -1,5 +1,38 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  animation: pageSlideUp 0.7s ease forwards;
+  font-family: 'body-font';
+}
+
+
+.contact-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/card-bkg4.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px) brightness(0.7);
+  z-index: 0;
+  pointer-events: none;
+}
+@keyframes pageSlideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .contact-container {
-  background-color: #7e7c8aaf;
+  position: relative;
+  top:50px;
+  background-color: rgba(255, 255, 255, 0.553);
   padding: 50px;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   width: 400px;
@@ -8,6 +41,7 @@
   border: 1px solid black;
   border-radius: 5px;
   animation: fadeInBounce 1s ease-out forwards;
+  z-index: 1;
 }
 
 @keyframes fadeInBounce {
@@ -29,6 +63,18 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.contact-container h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #333;
+}
+
+.contact-container h2 {
+  font-size: 1.3rem;
+  color: #333;
 }
 
 form h1,h2 {
@@ -57,7 +103,7 @@ form textarea:focus {
 }
 
 form button[type="submit"] {
-  background-color: #AFADAD;
+  background-color: #926441d7;
   border: none;
   padding: 10px 20px;
   border-radius: 50px;
@@ -65,12 +111,12 @@ form button[type="submit"] {
   font-size: 1.3rem;
   transition: 0.3s ease;
   font-family: inherit;
-  width: 35%;
+  width: 60%;
   margin: 0 auto;
 }
 
 form button[type="submit"]:hover {
-  background-color: #6c6a7684;
+  background-color: #92644151;
   box-shadow: 0 0 10px white;
   color: white;
 }
@@ -89,8 +135,6 @@ form button[type="submit"]:hover {
 
   form button[type="submit"] {
     font-size: 1.1rem;
-    padding: 5px;
-    width: 40%;
   }
 
   form input[type="text"],

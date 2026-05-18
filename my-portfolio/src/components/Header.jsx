@@ -1,44 +1,49 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 import Resume from "../assets/my-resume.pdf";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
   
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };  
 
-  const handleNavClick = () => {
-    setMenuOpen(false); 
-  };
-
   return (
-    <header className="header">
-      <div className="home-nav">
-        <a href="/MyWebPortfolio">Jenna's Portfolio</a>
-      </div>
-      <nav className="nav-bar">
-        <button className="menu-toggle" onClick={toggleMenu}>
-        &#9776;
-        </button>
-        <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
-          <li>
-            <Link to="/about-me" onClick={handleNavClick} className="nav-item about">About Me</Link>
+    <>
+      <header className="header">
+        <div className="home-nav">
+          <a href="/MyWebPortfolio">Jenna's Portfolio</a>
+
+          <button className={`menu-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
+        </div>
+        <nav className="nav-bar">
+          
+          <ul className={`nav-items ${menuOpen ? 'open' : ''}`}>
+          <li onClick={() => { setMenuOpen(false); navigate('/about-me'); }} className="nav-item about">
+            <span>About Me</span>
           </li>
-          <li>
-            <Link to="/projects" onClick={handleNavClick} className="nav-item project">Projects</Link>
+          <li onClick={() => { setMenuOpen(false); navigate('/projects'); }} className="nav-item project">
+            <span>Projects</span>
           </li>
-          <li>
-            <Link to="/contact-me" onClick={handleNavClick} className="nav-item contact">Contact</Link>
+          <li onClick={() => { setMenuOpen(false); navigate('/contact-me'); }} className="nav-item contact">
+            <span>Contact</span>
           </li>
-          <li>
-            <a className="nav-item resume" onClick={handleNavClick} href={Resume} target="_blank" rel="noopener noreferrer">Resume</a>
+          <li onClick={() => window.open(Resume, '_blank')} className="nav-item resume">
+            <span>Resume</span>
           </li>
-        </ul> 
-      </nav>
-    </header>
+          </ul> 
+        </nav>
+      </header>
+    </>
+    
   );
 }
 

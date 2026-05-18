@@ -1,10 +1,9 @@
 
 .project-format {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.251);
+  background-color: rgba(255, 255, 255, 0.509);
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 50px;
   border-radius: 10px;
   gap: 20px;
   border: 1px solid white;

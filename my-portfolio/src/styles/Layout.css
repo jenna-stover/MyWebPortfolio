@@ -5,15 +5,24 @@
 }
 
 header {
-  flex: 0 1 auto; 
-  z-index: 1000;
+  position: relative;
+  z-index: 20;
 }
 
-main {
-  margin-top: 125px;
-  flex: 1 0 auto; 
+.page-transition-overlay {
+  position: fixed;
+  bottom: 0;          
+  left: 0;
+  width: 100%;
+  height: 100%;         
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+  filter: blur(4px) brightness(0.7);
+  transform: translateY(100%);
+  transition: 0.7s ease;
 }
 
-footer {
-  flex: 0 1 auto; /* Allow footer to resize */
+.page-transition-overlay.active {
+  transform: translateY(0); 
 }

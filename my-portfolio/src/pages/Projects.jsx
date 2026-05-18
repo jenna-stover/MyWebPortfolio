@@ -78,8 +78,6 @@ const Projects = () => {
   return (
     <div className="projects">
         <div className="projects-container">
-          <h2 id="project-header">MY PROJECTS</h2>
-          <h3 id="project-header2">click on the image to view the project</h3>
           <div className={`project-one ${projectOneVisible ? 'visible' : 'hidden'}`} ref={projectOneRef}>
             <Project
               link="https://www.youtube.com/watch?v=Q6Rl8kQCoVc"
