@@ -1,6 +1,6 @@
 import "../styles/AboutMe.css";
 import React, { useState, useEffect } from 'react';
-import profilePic from '../assets/profile-pic.PNG';
+import profilePic from '../assets/profile-pic.jpg';
 
 const AboutMe = () => {
   const [step, setStep] = useState(0);

@@ -27,11 +27,11 @@
 .home-nav a{
   top: 0;
   font-family: 'lavish';
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 15px;
   transition: 0.3s ease;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .home-nav a:hover {
