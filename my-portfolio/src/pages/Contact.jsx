@@ -32,7 +32,7 @@ function Contact() {
         reset();
       }
     } catch (error) {
-      setResult('An error occurred while submitting the form.');
+      setResult('An error occurred while submitting this form.');
     }
   };
 
