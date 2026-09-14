@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MyWebPortfolio/static/css/main.f0e47354.css",
-    "main.js": "/MyWebPortfolio/static/js/main.5e379421.js",
+    "main.js": "/MyWebPortfolio/static/js/main.8b641e4c.js",
     "static/media/body-font.ttf": "/MyWebPortfolio/static/media/body-font.b30f6dd107ae0d40f7ab.ttf",
     "static/media/card-bkg1.jpg": "/MyWebPortfolio/static/media/card-bkg1.2eb9758382eaf3c7e591.jpg",
     "static/media/card-bkg4.jpg": "/MyWebPortfolio/static/media/card-bkg4.f89b7308061645ffb44a.jpg",
@@ -10,17 +10,17 @@
     "static/media/project5.png": "/MyWebPortfolio/static/media/project5.c461768b6ca110348d1a.png",
     "static/media/project-1.png": "/MyWebPortfolio/static/media/project-1.3128ec37e7941c859e09.png",
     "static/media/project2.png": "/MyWebPortfolio/static/media/project2.f7030ecab68828c97a72.png",
-    "static/media/my-resume.pdf": "/MyWebPortfolio/static/media/my-resume.1db62eced6d361adea89.pdf",
+    "static/media/my-resume.pdf": "/MyWebPortfolio/static/media/my-resume.89be35c06f9c6a6c2377.pdf",
     "static/media/LavishlyYours.ttf": "/MyWebPortfolio/static/media/LavishlyYours.c16bfd0f08b53817c83c.ttf",
     "static/media/project3.png": "/MyWebPortfolio/static/media/project3.02d9fdcde14f92c48574.png",
     "static/media/project4.png": "/MyWebPortfolio/static/media/project4.05b6120170ea513cc74b.png",
     "static/media/profile-pic.jpg": "/MyWebPortfolio/static/media/profile-pic.7a565ac8da5a91b0f5b1.jpg",
     "index.html": "/MyWebPortfolio/index.html",
     "main.f0e47354.css.map": "/MyWebPortfolio/static/css/main.f0e47354.css.map",
-    "main.5e379421.js.map": "/MyWebPortfolio/static/js/main.5e379421.js.map"
+    "main.8b641e4c.js.map": "/MyWebPortfolio/static/js/main.8b641e4c.js.map"
   },
   "entrypoints": [
     "static/css/main.f0e47354.css",
-    "static/js/main.5e379421.js"
+    "static/js/main.8b641e4c.js"
   ]
 }
